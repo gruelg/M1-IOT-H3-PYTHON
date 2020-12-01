@@ -1,0 +1,11 @@
+<!doctype html>
+<head>
+    <title>Book</title>
+</head>
+<body>
+    <ul id="contenu">
+        {% for key, value in contenu.items() %}
+            <li>{{ key }} : {{ value }}</li>
+        {% endfor %}
+    </ul>
+</body>
