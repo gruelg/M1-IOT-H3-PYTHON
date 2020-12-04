@@ -1,0 +1,38 @@
+[
+	{
+		"title" : "M1-IOT-H3-PYTHON",
+		"intro" : "Repo des cours en M1",
+		"date" : "2020-21",
+		"link" : "https://github.com/gruelg/M1-IOT-H3-PYTHON",
+		"language" : "Python"
+	},
+	{
+		"title" : "Borne-Accueil-IME",
+		"intro" : "Borne d'accueil pour les institus medical educatif equipé de reconnaissance facial",
+		"date" : "2018" ,
+		"link" : "https://github.com/gruelg/Borne-Accueil-IME"	,
+		"language" : 	"Python - PHP - HTML "
+	},
+	{
+		"title" : "Heltic",
+		"intro" : "plateforme de e-commerce" ,
+		"date" : "2020",
+		"link" : "https://gitlab.com/gruelg/heltec"	,
+		"language" : "PHP - HTML - CSS"
+	},
+	{
+		"title" : "Othello-Reversi",
+		"intro" : "jeu de plateau" ,
+		"date" : "2019",
+		"link" : "https://github.com/gruelg/Othello-Reversi---C-"	,
+		"language" : "C++"
+	},
+		{
+		"title" : "limite limite",
+		"intro" : "jeu de cartes" ,
+		"date" : "2020",
+		"link" : "https://gitlab.com/gruelg/limite-limite-angular"	,
+		"language" : "Angular js "
+	}
+
+]
