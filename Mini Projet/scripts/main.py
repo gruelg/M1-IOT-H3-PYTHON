@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 import os
 from flask import request
 import flask
@@ -16,6 +16,17 @@ def resume():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@app.route('/contact', methods=['POST'])
+def text_box():
+    response = {}
+    response['nom'] = request.form['nom']
+    response['prenom'] = request.form['prenom']
+    response['mail'] = request.form['mail']
+    response['message'] = request.form['message']
+    with open('messages.json', 'w') as f:
+        json.dump(response, f, indent=4, ensure_ascii=False, sort_keys=False)
+    return render_template('base.html')
 
 @app.route('/projet')
 def projet():

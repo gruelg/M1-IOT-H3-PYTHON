@@ -5,7 +5,7 @@
 {% endblock %}
 bordel
 {% block content %}
-  <form method="post">
+  <form action="." method="post">
     <label for="nom">Nom</label>
     <input name="nom" id="nom" required>
     <label for="prenom">Prenom</label>
@@ -13,7 +13,7 @@ bordel
     <label for="mail">@Mail</label>
     <input type="text" name="mail" id="mail" required>
     <label for="message">Message</label>
-    <input type="textera" name="message" id="message" required>
+    <textarea name="message" id="message" rows="5" cols="33" required></textarea>
     <input type="submit" value="Envoyer un message">
   </form>
 {% endblock %}
