@@ -1,6 +1,8 @@
 from typing import Optional
 
+import joblib
 from fastapi import FastAPI
+from flask import request
 
 app = FastAPI()
 
@@ -10,6 +12,12 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+@app.get("/param/{str}")
+def param( str: str):
+    model_filename = "./data/hatespeech.joblib.z"
+    clf = joblib.load(model_filename)
+    # Receives the input query from form
+    namequery = str
+    data = [namequery]
+    probas = clf.predict_proba([str(data)])[0]
+    return {"q": probas}
