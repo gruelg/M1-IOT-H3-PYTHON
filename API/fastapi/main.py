@@ -12,12 +12,10 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/param/{str}")
-def param( str: str):
+@app.get("/{stri}")
+def param( stri: str):
     model_filename = "./data/hatespeech.joblib.z"
     clf = joblib.load(model_filename)
     # Receives the input query from form
-    namequery = str
-    data = [namequery]
-    probas = clf.predict_proba([str(data)])[0]
-    return {"q": probas}
+    probas = clf.predict_proba([stri])[0]
+    return {"Hate speech : ": probas[0], "Offensive language : ": probas[1], "Neither : ": probas[2]}

@@ -12,7 +12,7 @@ def homepage():
 @app.route('/predict', methods=['POST'])
 def predict():
     #load model
-    model_filename = "./model/hatespeech.joblib.z"
+    model_filename = "hatespeech.joblib.z"
     clf = joblib.load(model_filename)
     # Receives the input query from form
     if request.method == 'POST':
