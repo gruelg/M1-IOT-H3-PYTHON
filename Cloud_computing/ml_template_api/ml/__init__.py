@@ -1,1 +1,1 @@
-from ml.utils.FeatureExtractor import FeatureExtractor
+from ml.utils import *
