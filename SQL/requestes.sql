@@ -17,6 +17,12 @@ select sum(productName), productLine from products group by productLine ;
 --9
 select min(amount) from payments;
 --10
-SELECT amount FROM payments having amount > (AVG(amount)*2);
+select amount from payments where amount > (select avg((amount*2)) from payments);
 --11
-
+select test from products having test = AVG(buyPrice-MSRP); -- faut a refaire 
+--12
+select distinct count(productName) from products;
+--13
+select customerName, city from customers where salesRepEmployeeNumber is NULL;
+--14 
+select CONCAT(lastName," ", firstName) from employees where jobTitle like 'VP%' or jobTitle like '%Manager%';
